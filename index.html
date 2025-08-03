@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&family=Figtree:ital,wght@0,300..900;1,300..900&family=GFS+Didot&family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Luxurious+Script&family=Outfit:wght@100..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        background: hsl(0, 0%, 94%);
+        font-family: "Belleza", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .container {
+        max-width: 60rem;
+        margin: 0 auto;
+        padding: 10rem 5rem;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .form button {
+        background-color: hsl(259, 100%, 65%);
+        padding: 1rem;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 4rem;
+        position: relative;
+        transform: none; /* Remove translateY(9rem) */
+      }
+
+      .input-group {
+        display: flex;
+        gap: 1.4rem;
+        z-index: 1;
+      }
+      .form-row {
+        display: flex;
+        align-items: flex-end;
+        /* position: relative; */
+        margin-top: 2rem;
+      }
+      /* .form-row::before {
+              content: "";
+              position: absolute;
+              top: 50%;  place the line mid-height
+              left: 0;
+              width: 100%; /* fill entire row
+              height: 1px;
+              background-color: hsl(0, 0%, 86%);
+              z-index: 0;
+            } */
+
+      .form button {
+        margin-left: 4rem;
+        position: relative;
+        background-color: hsl(259, 100%, 65%);
+        padding: 1rem;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transform: translateY(9rem);
+        /* transform: translateX(12rem); */
+        /* margin-right: 2rem; */
+      }
+
+      .form button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -32rem; /* Pull it back more to cover the inputs */
+        width: 32rem; /* Length of the line going left */
+        height: 1px;
+        background-color: hsl(0, 0%, 86%);
+        z-index: 0;
+      }
+
+      .general {
+        background-color: hsl(0, 100%, 100%);
+        padding-left: 3.6rem;
+        padding-right: 15rem;
+        padding-top: 3.2rem;
+        padding-bottom: 2rem;
+
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 120px;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        width: 10rem;
+        height: 4rem;
+        padding: 2.1rem;
+        font-size: 1.6rem;
+        text-align: center;
+        border-radius: 3px;
+        border: 1px solid hsl(0, 0%, 86%);
+        text-align: center;
+        outline: none;
+      }
+      input::placeholder {
+        color: hsl(0, 1%, 44%);
+        font-weight: 600;
+        font-size: 2rem;
+      }
+      input:hover {
+        border-color: hsl(259, 100%, 65%);
+      }
+      label {
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
+        color: hsl(0, 1%, 44%);
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .error-msg {
+        color: hsl(7, 100%, 60%);
+        font-size: 1.2rem;
+        margin: 0.5rem 0 0 0;
+        font-style: italic;
+      }
+      /* p {
+              font-size: 6rem;
+              color: #000;
+              text-align: center;
+              font-weight: 600;
+            }
+            span {
+              font-size: 6rem;
+              text-align: center;
+              font-weight: 600;
+              margin-right: 1rem;
+
+              color: hsl(259, 100%, 65%);
+            } */
+      .result {
+        padding-left: 1.2rem;
+        margin-top: 6rem;
+      }
+      .result p {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .result span {
+        color: #000;
+      }
+      #years,
+      #months,
+      #days {
+        color: hsl(259, 100%, 65%);
+        font-size: 9rem;
+      }
+    </style>
+    <link href="queries.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="general">
+        <form class="form" novalidate>
+          <div class="form-row">
+            <div class="input-group">
+              <div class="form-group">
+                <label for="day"> Day</label>
+                <input
+                  type="number"
+                  name="day"
+                  id="day"
+                  placeholder="DD"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="month">Month </label>
+                <input
+                  type="number"
+                  name="month"
+                  id="month"
+                  placeholder=" MM"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="year"> Year</label>
+                <input
+                  type="number"
+                  name="year"
+                  id="year"
+                  placeholder="YYYY"
+                  required
+                />
+              </div>
+            </div>
+            <button>
+              <img
+                src="assets/images/icon-arrow.svg"
+                alt="btn"
+                class="btn-icon"
+              />
+            </button>
+          </div>
+        </form>
+
+        <div id="result" class="result">
+          <strong>
+            <p>
+              <span id="years">--</span><span id="year-label">years</span>
+            </p></strong
+          >
+          <strong>
+            <p>
+              <span id="months">--</span><span id="month-label">months</span>
+            </p></strong
+          >
+          <strong>
+            <p>
+              <span id="days">--</span><span id="day-label">days</span>
+            </p></strong
+          >
+        </div>
+      </div>
+    </div>
+    <!-- -- years -- months -- days-->
+  </body>
+</html>

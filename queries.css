@@ -1,0 +1,123 @@
+@media (max-width: 37.5em) {
+  body {
+    padding: 2em 0 0 0;
+    margin: 0;
+
+    overflow-x: hidden;
+  }
+  label {
+    font-size: 1em;
+    /* margin-right: -2.5rem; */
+  }
+  .container {
+    padding: 3em 2em;
+  }
+  .general {
+    background-color: hsl(0, 100%, 100%);
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    padding-top: 1.6em;
+    padding-bottom: 3em;
+    position: relative;
+
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 120px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+    position: relative;
+    padding-inline: 2rem;
+  }
+  .input-group {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%; /* span full width of .form */
+    gap: 3rem;
+  }
+  input {
+    width: 150%;
+
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 900;
+  }
+  input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  /* .form button {
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+    transform: translate(2rem, 8rem); /* right, down 
+    right: 14rem;
+
+    z-index: 1;
+  } */
+
+  .form button {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: -13rem; /* optional, can adjust */
+    top: -1rem; /* move down from input */
+    z-index: 1;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form button::before,
+  .form button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10rem; /* adjust length of line */
+    height: 1px;
+    background-color: hsl(0, 0%, 86%);
+    z-index: -1;
+  }
+  .btn-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .error-msg {
+    color: hsl(7, 100%, 60%);
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
+  }
+
+  .form button::before {
+    left: -10.3rem;
+  }
+
+  .form button::after {
+    right: -10.3rem;
+  }
+  #years,
+  #months,
+  #days {
+    color: hsl(259, 100%, 65%);
+    font-size: 3rem;
+  }
+}
