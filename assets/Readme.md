@@ -2,7 +2,7 @@
 
 A responsive and accessible age calculator web app built with HTML, CSS, and JavaScript. Enter your date of birth, and the app calculates your exact age in years, months, and days.
 
-[Live Demo] (https://agecalculatorapp77.netlify.app/)
+[Live Demo](https://agecalculatorapp77.netlify.app/)
 
 ## ✨ Features
 
@@ -35,30 +35,14 @@ To run the project locally:
 1. Clone this repo:
 
    ```bash
-   git clone https://github.com/your-username/age-calculator-app.git
-
+   git clone https://github.com/Abdulraheem77777/age-calculator-app.git
    ```
 
-2. Navigate into the project directory:
+   2.Navigate into the project directory:
 
-b
-cd age-calculator-app
-Open index.html in your browser.
+cd age-calculator-app 3. Open index.html in your browser.
 
 No build tools or dependencies required.
 
-3. Open index.html in your browser.
-
-No build tools or dependencies required.
-
-age-calculator-app
-├── index.html
-├── style.css
-├── queries.css
-├── script.js
-├── assets/
-│ ├── fonts/
-│ └── images/
-└── design/
 📌 Credits
 Design inspired by Frontend Mentor Challenge.
