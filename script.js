@@ -96,6 +96,9 @@ class AgeCalculator {
       countUp(daysShow, days, 2000);
       countUp(monthsShow, months, 2000);
       countUp(yearsShow, years, 2000);
+
+      // 🧼 Clear the form after success
+      this._parentElement.reset();
     }
   }
   _showError(inputEl, message) {
