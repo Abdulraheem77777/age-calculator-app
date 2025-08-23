@@ -51,6 +51,7 @@ class AgeCalculator {
       isValid = false;
     }
     if (isValid) {
+      this._parentElement.reset();
       //get the input values(form data) and convert to number
       const inputDay = Number(data.day);
       const inputMonth = Number(data.month);

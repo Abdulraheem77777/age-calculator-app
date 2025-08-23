@@ -4,7 +4,7 @@
     overflow-x: hidden;
   }
   body {
-    padding: 2em 0 0 0;
+    padding: 0 0 1em 0;
     margin: 0;
   }
   label {
@@ -13,17 +13,19 @@
   }
   .container {
     padding: 3em 2em;
+    min-height: 100vh;
   }
   .general {
     background-color: hsl(0, 100%, 100%);
 
     padding-left: 4em;
-    padding-right: 3.2em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+
+    padding-right: 2.8em;
+    padding-top: 3.2em;
+    padding-bottom: 2.8em;
 
     position: relative;
-
+    overflow: visible;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
     border-bottom-left-radius: 11px;
@@ -73,7 +75,8 @@
   } */
 
   .form button {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
     padding: 1rem;
     border-radius: 50%;
     background-color: hsl(259, 100%, 65%);
